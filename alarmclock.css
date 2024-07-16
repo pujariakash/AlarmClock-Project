@@ -1,0 +1,81 @@
+body {
+    background-image: linear-gradient(60deg, #007bff, #27ae60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+h1{
+    margin-top: 90px;
+}
+
+.container {
+    height: auto;
+    width: 350px;
+    border: blue solid 1px;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.currenttime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.setalarm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#setAlarmButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0.5px 0.5px 10px black;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#setAlarmButton:active {
+    background-color: blue;
+    box-shadow: 0px 10px white;
+    transform: translateY(4px);
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    cursor:pointer;
+    margin-right:25px;
+}
+.list-group-item:active{
+    box-shadow: 1px 1px 10px black;
+    transform: translateY(4px);
+}
