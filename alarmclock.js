@@ -59,6 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const formattedSecond = second.padStart(2, '0');
         const alarmTime = `${formattedHour}:${formattedMinute}:${formattedSecond} ${ampm}`;
 
+        // ✅ Check if alarm already exists
+        if (alarms.some(alarm => alarm.time === alarmTime)) {
+            alert('An alarm is already set for this time.');
+            return;
+        }
+
         // Convert alarm time to a Date object//
         const now = new Date();
         let alarmDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
@@ -99,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
         deleteButton.style.borderTopRightRadius='10px';
         deleteButton.style.cursor='pointer';
         
-    
         deleteButton.addEventListener('click', () => {
             alarmList.removeChild(listItem);
             removeAlarm(time);
@@ -117,12 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alarms = alarms.filter(alarm => alarm.time !== time);
     }
 
-     // Checking for existing alarms//
-    if (alarms.some(alarm => alarm.time === alarmTime)) {
-        alert('An alarm is already set for this time.');
-        return;
-    }
     setInterval(DisplayTime, 1000); // Update the clock every second
     DisplayTime(); // Display the initial time
 });
-
