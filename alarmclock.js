@@ -117,6 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
         alarms = alarms.filter(alarm => alarm.time !== time);
     }
 
+     // Checking for existing alarms//
+    if (alarms.some(alarm => alarm.time === alarmTime)) {
+        alert('An alarm is already set for this time.');
+        return;
+    }
     setInterval(DisplayTime, 1000); // Update the clock every second
     DisplayTime(); // Display the initial time
 });
+
