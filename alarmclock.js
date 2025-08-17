@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formattedSecond = second.padStart(2, '0');
         const alarmTime = `${formattedHour}:${formattedMinute}:${formattedSecond} ${ampm}`;
 
-        // ✅ Check if alarm already exists
+      //checking duplicating  alarm//
         if (alarms.some(alarm => alarm.time === alarmTime)) {
             alert('An alarm is already set for this time.');
             return;
@@ -125,3 +125,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(DisplayTime, 1000); // Update the clock every second
     DisplayTime(); // Display the initial time
 });
+
